@@ -28,7 +28,7 @@ The `apiPort` and `apiRoute` args are optional and default to `5000` and `api`, 
   scripts: {
     //
     "start.app1": "ng serve --project=app1 --host=example.localhost --port=4200",
-    "start.app2": "ng serve --project=app2 --host subdomain.example.localhost --port=4201"
+    "start.app2": "ng serve --project=app2 --host=subdomain.example.localhost --port=4201"
   }
 ```
 
