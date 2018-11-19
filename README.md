@@ -9,7 +9,7 @@ It will allow you to serve `http://localhost:4200` from a secured local domain l
 2. Go to your workspace and:
 ```
 npm link /path/to/reverse-proxy-schematic/src/proxy
-ng g proxy:proxy --hostname="example.localhost" --apiPort=5000 --apiRoute=api
+ng g proxy:proxy --hostname="example.localhost" --apiPort="5000" --apiRoute="api"
 ```
 The `apiPort` and `apiRoute` args are optional and default to `5000` and `api`, respectively. If using cloud functions for the backend, you can provide the locally served URL (ex: `5000/example-com/us-central1`) to the `apiPort`.
 
