@@ -21,7 +21,7 @@ The `apiPort` and `apiRoute` args are optional and default to `5000` and `api`, 
 ### What you need to setup
 1. update contents of `proxy/cert/proxy.csr.cnf` (change `[COUNTRY CODE]` to `US` and so on)
 2. run `npm run generate.proxy.cert`
-3. add `/proxy/cert/ssl/rootCA.pem` to your browser's "Trusted Root Certification Authorities"
+3. add `/proxy/cert/ssl/rootCA.pem` to your browser's _Trusted Root Certification Authorities_
 4. add the hostname domain and any subdomains to [your local hosts file](https://gist.github.com/zenorocha/18b10a14b2deb214dc4ce43a2d2e2992)
 5. add custom scripts to package.json to serve each app via proxy **(script name must start with _`start.`_)**:
 ```
