@@ -26,5 +26,7 @@
     "schematics-utilities": "^1.1.1",
     "typescript": "~3.1.6"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "prettier": "^1.15.2"
+  }
 }
