@@ -32,4 +32,4 @@ The `apiPort` and `apiRoute` args are optional and default to `5000` and `api`, 
   }
 ```
 
-Then `npm run proxy`, `npm run start.app1`, `npm run start.app2`
+Then `npm run proxy`, `npm run start.app1`, `npm run start.app2` and open `https://example.localhost`
