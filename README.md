@@ -1,21 +1,24 @@
 # reverse-proxy-schematic
 Angular schematic for a development SSL wildcard reverse-proxy
 
-#### What is it for?
+### What is it for?
 It will allow you to serve `http://localhost:4200` from a secured local domain like `https://example.localhost`. You can also add subdomains such that `http://localhost:4201` will be served from `https://subdomain.example.localhost`.
 
-#### Installation
+### Installation
+1. Download the source code to `/path/to/reverse-proxy-schematic`
+2. Go to your workspace and:
 ```
+npm link /path/to/reverse-proxy-schematic/src/proxy
 ng g proxy:proxy --hostname="example.localhost" --apiPort=5000 --apiRoute=api
 ```
 The `apiPort` and `apiRoute` args are optional and default to `5000` and `api`, respectively. If using cloud functions for the backend, you can provide the locally served URL (ex: `5000/example-com/us-central1`) to the `apiPort`.
 
-#### This schematic adds
+### This schematic adds
 1. a `proxy` folder to the root of your workspace
 2. `generate.proxy.cert` and `proxy` scripts to package.json
 3. `chalk`, `inquirer`, and `shelljs` dev dependencies
 
-#### What you need to setup
+### What you need to setup
 1. update contents of `proxy/cert/proxy.csr.cnf` (change `[COUNTRY CODE]` to `US` and so on)
 2. run `npm run generate.proxy.cert`
 3. add `/proxy/cert/ssl/rootCA.pem` to your browser's "Trusted Root Certification Authorities"
