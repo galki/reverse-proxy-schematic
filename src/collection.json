@@ -2,7 +2,7 @@
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
     "proxy": {
-      "description": "A reverse-proxy schematic for an nx-firebase project",
+      "description": "Angular schematic for a development SSL wildcard reverse-proxy",
       "factory": "./proxy/index#proxy",
       "schema": "./proxy/schema.json"
     }
