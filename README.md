@@ -31,3 +31,5 @@ The `apiPort` and `apiRoute` args are optional and default to `5000` and `api`, 
     "start.app2": "ng serve --project=app2 --host subdomain.example.localhost --port=4201"
   }
 ```
+
+Then `npm run proxy`, `npm run start.app1`, `npm run start.app2`
