@@ -1,0 +1,14 @@
+[req]
+default_bits = 2048
+prompt = no
+default_md = sha256
+distinguished_name = dn
+
+[dn]
+C = [COUNTRY CODE]
+ST = [STATE]
+L = [CITY]
+O = [COMPANY]
+OU = [TEAM]
+emailAddress = admin@<%= hostname %>
+CN = <%= hostname %>

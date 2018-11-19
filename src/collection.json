@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "proxy": {
+      "description": "A reverse-proxy schematic for an nx-firebase project",
+      "factory": "./proxy/index#proxy",
+      "schema": "./proxy/schema.json"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "reverseProxy",
+  "title": "Creates a reverse-proxy schematic.",
+  "type": "object",
+  "properties": {
+    "hostname": {
+      "description": "Specifies the proxy hostname",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "apiPort": {
+      "description": "Specifies the backend api server port",
+      "type": "string",
+      "default": "5000"
+    },
+    "apiRoute": {
+      "description": "Specifies the backend api client route",
+      "type": "string",
+      "default": "api"
+    }
+  },
+  "required": [
+    "hostname"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,19 @@
+{
+  "name": "unitedhubs-proxy",
+  "author": "unitedhubs",
+  "license": "SEE LICENSE IN ../../../LICENSE",
+  "description": "localhost proxy server",
+  "main": "proxy.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unitedhubs/unitedhubs"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node proxy"
+  },
+  "dependencies": {
+    "http-proxy": "^1.17.0"
+  },
+  "devDependencies": {}
+}
