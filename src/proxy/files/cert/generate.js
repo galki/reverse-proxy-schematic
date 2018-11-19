@@ -23,7 +23,6 @@ inquirer
       info('Generated a new ssl certificate!');
       shell.echo(`Be sure to:
       1) add the domain and any subdomains to your hosts file
-      2) add /proxy/cert/ssl/rootCA.pem to \
-      your browser's "Trusted Root Certification Authorities"`);
+      2) add /proxy/cert/ssl/rootCA.pem to your browser's "Trusted Root Certification Authorities"`);
     }
   });
