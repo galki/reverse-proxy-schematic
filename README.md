@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/unitedhubs/reverse-proxy-schematic.svg?style=svg)](https://circleci.com/gh/unitedhubs/reverse-proxy-schematic)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
 # reverse-proxy-schematic
 Angular schematic for a development SSL wildcard reverse-proxy
 
