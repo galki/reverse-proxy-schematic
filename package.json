@@ -1,6 +1,6 @@
 {
   "name": "reverse-proxy-schematic",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Angular schematic for a development SSL wildcard reverse-proxy",
   "repository": {
     "type": "git",
