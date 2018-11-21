@@ -1,13 +1,9 @@
 {
-  "name": "unitedhubs-proxy",
+  "name": "reverse-proxy-schematic",
   "author": "unitedhubs",
-  "license": "SEE LICENSE IN ../../../LICENSE",
-  "description": "localhost proxy server",
+  "license": "MIT",
+  "description": "Angular schematic for a development SSL wildcard reverse-proxy",
   "main": "proxy.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/unitedhubs/unitedhubs"
-  },
   "private": true,
   "scripts": {
     "start": "node proxy"
@@ -15,5 +11,10 @@
   "dependencies": {
     "http-proxy": "^1.17.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.19.0",
+    "inquirer": "^6.2.0",
+    "shelljs": "^0.8.3"
+  }
 }

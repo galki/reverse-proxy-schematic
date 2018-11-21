@@ -14,11 +14,6 @@ import {
   Tree,
   url,
 } from '@angular-devkit/schematics';
-import {
-  addPackageJsonDependency,
-  NodeDependency,
-  NodeDependencyType,
-} from 'schematics-utilities';
 
 function addFiles(options: any): Rule {
   return (tree: Tree, context: SchematicContext) => {
@@ -37,38 +32,6 @@ function addFiles(options: any): Rule {
 
     const rule = mergeWith(templateSource, MergeStrategy.Default);
     return rule(tree, context);
-  };
-}
-
-function addPackageJsonDependencies(): Rule {
-  return (host: Tree, context: SchematicContext) => {
-    const dependencies: NodeDependency[] = [
-      {
-        type: NodeDependencyType.Dev,
-        version: '^0.8.3',
-        name: 'shelljs',
-      },
-      {
-        type: NodeDependencyType.Dev,
-        version: '^2.4.1',
-        name: 'chalk',
-      },
-      {
-        type: NodeDependencyType.Dev,
-        version: '^6.2.0',
-        name: 'inquirer',
-      },
-    ];
-
-    dependencies.forEach(dependency => {
-      addPackageJsonDependency(host, dependency);
-      context.logger.log(
-        'info',
-        `✅️ Added "${dependency.name}" into ${dependency.type}`
-      );
-    });
-
-    return host;
   };
 }
 
@@ -124,9 +87,6 @@ export function proxy(options: any): Rule {
   return (_tree: Tree, _context: SchematicContext) => {
     return chain([
       addFiles(options),
-      options && options.skipPackageJson
-        ? noop()
-        : addPackageJsonDependencies(),
       options && options.skipPackageJson
         ? noop()
         : installPackageJsonDependencies(),

@@ -2,10 +2,13 @@ const fs = require('fs');
 const path = require('path');
 const httpProxy = require('http-proxy');
 const https = require('https');
+const program = require('commander');
 
 const apiPortPath = <%= apiPort %>;
 const apiRoute = '/<%= apiRoute %>/';
 const proxyPort = 443;
+
+program.option('-s, --silent', 'Do not output logs to console').parse(process.argv);
 
 // extract hosts and ports from package.json scripts
 const hostPorts = {};
@@ -44,12 +47,16 @@ https
     }
 
     const target = `http://localhost:${portPath}`;
-    console.log(
-      `proxying ${req.headers.host}${req.url} to ${target}${req.url}`
-    );
+    if (!program.silent) {
+      console.log(
+        `proxying ${req.headers.host}${req.url} to ${target}${req.url}`
+      );
+    }
     if (target !== undefined) {
       proxy.web(req, res, { target }, error => {
-        console.error('PROXY ERROR:', error);
+        if (!program.silent) {
+          console.error('PROXY ERROR:', error);
+        }
       });
     } else {
       res.writeHead(500, { 'Content-Type': 'text/plain' });
